@@ -1,0 +1,115 @@
+TaskList:Commands
+Date:08-03-2021
+
+ToDo:
+----
+
+	- Can your depand to connect the OS you are running,.
+	
+		Secure Shell(SSH) = Linux-based Machines,.
+		Remote Desktop Protocal(RDP) = Windows-based Machines
+	
+       - Two protocols use the client and server applications to establish a remote connection.
+       
+       - Establish a secure remote desktop protocal to need basic requirements,.
+      
+	     # IP address or remote machine you want to connect to,.
+	     # Permissions to access the remote computer,.
+	     # Firewall settings need to allow the remote connection.
+	
+       - Can you get to check to 'ssh'
+	
+       - OpenSSH client install command,.
+		sudo apt-get install openssh-client
+		
+	- SSH server install command,.
+		sudo apt-get install openssh-server ii
+	
+	- Check the ssh server status,.
+		sudo service ssh status
+		
+	- Accept the connection try to running in our local system 
+		 ssh localhost
+	
+	- SSH daemon config file to change the default port for ssh connections.
+	
+		sudo nano /etc/ssh/sshd_config
+		
+	- Install  nano command,.
+	
+		sudo apt-get install nano
+	
+	- Changes done  on the file could you restart the file once,.
+		sudo service ssh restart
+		
+	- check the connection ability to following command,.
+		       SSH:
+	       	ssh - Secure Shell
+	       	
+			ssh your_username@host_ip_address
+		
+	- Move the file one pc to  another pc via terminal using following command ,.
+	
+	     	* check the ip will be alive,.
+		     	ping @ip_address
+		     	
+		* File move to one place to another place could be using to following command,.
+
+		* It will ecure encrypted 
+		
+			scp your_path PC2user_name@ip_address:path
+		
+			
+		Example:	
+                -------
+			scp home/desktop bambus05@192.168.2.158:home
+		    
+		    cp is copy file one directory to another directory. Here,before your could add "s"
+		    scp = secure copy path.
+			
+		    
+	- ssh using enter the another pc. Your could be using to move the file one designation to another designation. The following method will be use,..
+	
+	PC2@username: scp /home/bambus05/dinesh_pra/lincom.txt bambus08@192.168.1.54:.
+     * dot(.) it mention like the "home" directory
+     
+     
+   ii)MODE OF ACCESS:
+     ---------------
+	 Mode of access is like to given to the file access.
+
+	Command Syntax:
+		chmod options permissions file_name
+
+	 chmod u=rwx,g=rx,o=r myfile
+
+	u-user , g-group , o-other [r-read[4],w-write[2],x-execute[1]]
+
+	UserID[4],GroupID[2],Sticky[1]
+
+	Three operation could be follow to using,.
+	
+	+ is Existing file mode,.
+	- is Removed file mode,.
+	= Unmentioned[Group ID]
+
+	u+s = Owner only access the file[Superb user]
+		    
+	u = user , + = stands to add , - = remove , x= executable
+
+	Digit         Permissions
+	----- 	     ------------
+	000		No Permission
+	001		Execute Permissions	
+	010		Write Permissions
+	011		Write and Execute Permissions
+	100             Read Permissions
+	101		Read and Execute Permissions
+	110		Read and Write Permissions
+	110		Read and Write Permissions
+	111		Read , Write,and  executable Permissions
+       
+
+     chown:
+	Change owner or user and ownership
+
